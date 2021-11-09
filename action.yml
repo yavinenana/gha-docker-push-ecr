@@ -1,0 +1,56 @@
+name: 'Docker ECR'
+description: 'Upload Docker Image to Amazon Elastic Container Registry (ECR)'
+author: 'Bo-Yi Wu'
+inputs:
+  access_key:
+    description: 'amazon access key'
+  secret_key:
+    description: 'amazon secret access key'
+  registry:
+    description: 'docker registry'
+  region:
+    description: 'amazon region, defaults to us-east-1'
+    default: 'us-east-1'
+  repo:
+    description: 'repository name for the image'
+  lifecycle_policy:
+    description: 'filename of ecr lifecycle json policy'
+  repository_policy:
+    description: 'filename of ecr repository json policy'
+  tags:
+    description: 'repository tag for the image, defaults to latest'
+    default: 'latest'
+  dockerfile:
+    description: 'dockerfile to be used, defaults to Dockerfile'
+    default: 'Dockerfile'
+  auth:
+    description: 'auth token for the registry'
+  context:
+    description: 'the context path to use, defaults to root of the git repo'
+    default: '.'
+  force_tag:
+    description: 'replace existing matched image tags'
+  insecure:
+    description: 'enable insecure communication to this registry'
+  mirror:
+    description: 'use a mirror registry instead of pulling images directly from the central Hub'
+  bip:
+    description: 'use for pass bridge ip'
+  custom_dns:
+    description: 'set custom dns servers for the container'
+  storage_driver:
+    description: 'supports aufs, overlay or vfs drivers'
+  cache_from:
+    description: 'images to consider as cache sources'
+  auto_tag:
+    description: 'default build tags'
+  daemon_off:
+    description: 'do not start the docker daemon'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'box'
+  color: 'orange'
