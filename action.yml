@@ -1,6 +1,6 @@
-name: 'Docker ECR'
-description: 'Upload Docker Image to Amazon Elastic Container Registry (ECR)'
-author: 'Bo-Yi Wu'
+name: 'build docker && push ecr'
+description: 'Build Docker Image and Push to AWS ECR'
+author: 'yavinenana'
 inputs:
   access_key:
     description: 'amazon access key'
