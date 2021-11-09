@@ -1,1 +1,2 @@
-# docker-push-ecr
+# gha-docker-push-ecr
+github action
